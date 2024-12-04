@@ -10,10 +10,8 @@ class Program
         // Available products
         var products = new List<Product>
         {
-            new NonTaxableProduct("Apple", 1.00m),
-            new TaxableProduct("Shampoo", 5.50m),
-            new NonTaxableProduct("Bread", 2.50m),
-            new TaxableProduct("Chocolate", 3.00m)
+            // fill this in
+
         };
 
         ShoppingCart cart = new ShoppingCart();

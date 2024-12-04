@@ -19,37 +19,3 @@ public abstract class Product
     public abstract decimal GetTax();
 }
 
-// TaxableProduct subclass
-public class TaxableProduct : Product
-{
-    private const decimal TaxRate = 0.08m;
-
-    public TaxableProduct(string name, decimal price) : base(name, price) { }
-
-    public override decimal GetPrice()
-    {
-        return Price + GetTax();
-    }
-
-    public override decimal GetTax()
-    {
-        return Price * TaxRate;
-    }
-}
-
-// NonTaxableProduct subclass
-public class NonTaxableProduct : Product
-{
-    public NonTaxableProduct(string name, decimal price) : base(name, price) { }
-
-    public override decimal GetPrice()
-    {
-        return Price;
-    }
-
-    public override decimal GetTax()
-    {
-        return 0;
-    }
-}
-
